@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "video_annonymization"
+version = "0.1.0"
+description = ""
+authors = ["Naoya Yoshimura"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+opencv-python = "^4.9.0"
+opencv-contrib-python = "^4.9.0"
+attrs = "^23.2.0"
+torch = "2.2.1"
+torchvision = "0.17.1"
+loguru = "^0.7.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

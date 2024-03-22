@@ -1,0 +1,25 @@
+version: "3.5"
+services:
+  openpack-vision:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    image: openpack-vision:video-anonymization-v1
+    container_name: opv-anonymization
+    tty: true
+    environment:
+      PYTHONPATH: "/content"
+    working_dir: /content/video_annonymization
+    volumes:
+      - ../:/content
+    ports:
+      - "8888:8888"
+    privileged: true
+    shm_size: 8gb
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
