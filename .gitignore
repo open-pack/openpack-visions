@@ -352,3 +352,8 @@ $RECYCLE.BIN/
 *.png
 *.jpg
 *.mp4
+*.mkv
+
+# Custom Directory
+# for log directory
+outputs/
